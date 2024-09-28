@@ -9,6 +9,34 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+
+// const allowedOrigins = ["http://localhost:5173",];
+// const whitelist = ["http://localhost:5173"];
+//
+// const credentials = (req, res, next) => {
+//     const origin = req.headers.origin;
+//     if (allowedOrigins.includes(origin)) {
+//         res.header("Access-Control-Allow-Credentials", true);
+//     }
+//     next();
+// };
+//
+// app.use(credentials);
+//
+//
+// const corsOptions = {
+//     origin: (origin, callback) => {
+//         if (whitelist.indexOf(origin) !== -1 || !origin) {
+//             callback(null, true);
+//         } else {
+//             callback(new Error("Not Allowed by CORS"));
+//         }
+//     },
+//     optionsSuccessStatus: 200,
+// };
+
+
 app.use(cors());
 
 app.use(bodyParser.json());
