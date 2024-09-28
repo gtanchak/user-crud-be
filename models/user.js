@@ -20,6 +20,6 @@ const userSchema = new mongoose.Schema({
         enum: ['Active', 'Inactive', 'Suspended'],
         default: 'Active',
     },
-});
+}, {timestamps: true});
 
 module.exports = mongoose.model('User', userSchema);
