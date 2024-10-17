@@ -21,11 +21,9 @@ app.use(cors());
 // Use bodyParser middleware to parse JSON requests
 app.use(bodyParser.json());
 
-// Route handling
 // Prefix all user-related routes with '/api/users'
 app.use('/api/users', userRoutes);
 
-// MongoDB connection using Mongoose
 // Connect to MongoDB using the connection string defined in environment variables
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,   // Use the new URL string parser
